@@ -1,0 +1,27 @@
+@import "bootstrap";
+
+@font-face {
+    font-family: 'league_gothicregular';
+    src: asset-url('leaguegothic-regular-webfont.eot');
+    src: asset-url('leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         asset-url('leaguegothic-regular-webfont.woff') format('woff'),
+         asset-url('leaguegothic-regular-webfont.ttf') format('truetype'),
+         asset-url('leaguegothic-regular-webfont.svg#league_gothicregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+body{color:#000;font-family:Helvetica,Arial,sans-serif;background:#e1e1e1;}
+h1,h2,h3,h4,h4{font-family: league_gothicregular,sans-serif;}
+.navbar-default{background:#BBB;}
+.navlinks{font-size:1.5em;color:#555;}
+.navlinks:hover{color:#6f6f6f;}
+.navbar-default .navbar-brand{font-size:3em;color:#000;font-family: league_gothicregular,sans-serif;}
+.navbar-default .navbar-brand:hover{color:#555;}
+.center{text-align:center;}
+.col-md-3:nth-child(4n+1){clear:left;}
+.show-details{font-size:1.5em;}
+.show-title{font-size:3em;}
+.show-sm-details{font-size:1.2em;}
