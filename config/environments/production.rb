@@ -78,6 +78,10 @@ Rails.application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
-  # Do not dump schema after migrations.
+# Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+# Required for Devise gem. Remember to change localhost3000 to actaul application host
+
+  config.action_mailer.default_url_options = { host: 'localhost:3000' }
 end
