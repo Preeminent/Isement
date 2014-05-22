@@ -10,7 +10,7 @@
         <h2 class="center"><%= listing.name %></h2>
         <p><%= listing.description %></p>
         <p class="center"><%= number_to_currency(listing.price) %></p>
-        <p class="center"><%= "Sold by #{listing.user.name}" %></p>
+        
         <p class="center"><%= listing.city %></p>
         <p class="center"><%= listing.state %></p>
         <%= link_to 'Show', listing, class: "btn btn-link" %>
