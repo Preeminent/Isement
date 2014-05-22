@@ -5,5 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
  validates :name, :city, :state, presence: true
+
+ has_many :listings, dependent: :destroy
  
 end
