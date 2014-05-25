@@ -11,6 +11,10 @@
     <p class="show-sm-details"><%= number_to_currency(@listing.price) %></p>
     <p class="show-sm-details"><%= @listing.city %></p>
     <p class="show-sm-details"><%= @listing.state %></p>
+    <br>
+    <div class="center">
+    <%= link_to "Order This Spot", new_listing_order_path(@listing), class: "btn btn-primary wht-text" %>
+  </div><!end center-->
   </div>
 
 </div>
