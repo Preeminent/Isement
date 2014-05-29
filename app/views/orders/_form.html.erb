@@ -21,6 +21,10 @@
     </div>
   <% end %>
 
+  <div id="stripe_error" class="alert alert-danger" style="display:none">
+    <noscript> Javascript is disabled. Order cannot be placed. First enable it in your browser.</noscript>
+  </div>
+
   <div class="form-group">
     <%= f.label :title %>
     <%= f.text_field :title, class: "form-control" %>

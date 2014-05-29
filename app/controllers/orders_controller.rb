@@ -27,9 +27,11 @@ end
     @order.buyer_id = current_user.id
     @order.seller_id = @seller.id
 
+   
+
     respond_to do |format|
       if @order.save
-        format.html { redirect_to root_url, notice: 'Order was successfully created.' }
+        format.html { redirect_to root_url }
         format.json { render :show, status: :created, location: @order }
       else
         format.html { render :new }
