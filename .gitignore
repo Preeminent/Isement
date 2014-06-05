@@ -20,3 +20,7 @@
 
 #Ignore file uploaded on localhost
 /public/system
+
+#Ignore email user and pass
+.env
+Procfile

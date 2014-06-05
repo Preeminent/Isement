@@ -25,6 +25,7 @@ end
 
 group :development, :test do
 	gem 'sqlite3'
+	gem 'foreman'
 end
 
 group :doc do 
