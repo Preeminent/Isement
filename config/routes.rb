@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   end
 
   get 'pages/about'
-  get 'pages/contact'
+  resources "contacts", only: [:new, :create]
   get 'pages/terms'
   get 'pages/pricing'
   get 'seller' => "listings#seller"

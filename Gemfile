@@ -16,7 +16,8 @@ gem "figaro"
 gem "devise"
 gem 'stripe'
 gem 'jquery-turbolinks'
-
+gem 'mail_form'
+gem 'simple_form'
 
 group :production do
 	gem 'pg'
