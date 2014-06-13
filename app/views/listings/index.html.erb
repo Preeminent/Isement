@@ -1,18 +1,18 @@
-<div class="jumbotron">
-<h1>Buy and Sell Advertising Space</h1>
-<h2>In unique and clever spots.</h2>
-</div><!--end jumbotron-->
-
+<!--<div class="alert alert-info alert-dismissable">
+  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+  <strong><h3>Now open to the Portland, Oregon market!</h3></strong><br>
+  <span>Interested in another market?</span><br><a href="#" class="alert-link">Let Us Know.</a> 
+</div>-->
 <div class="row">
   <% @listings.each do |listing| %>
-  <div class="col-md-3">
+  <div class="col-md-3 hm-listing-bx">
 
 <div class="thumbnail">
   <%= link_to image_tag(listing.image.url), listing %>
        
       <div class="caption">
         <h2 class="center"><%= listing.name %></h2>
-        <p><%= listing.description %></p>
+        <p><%= truncate listing.description, length: 100 %></p>
         <p class="center"><%= number_to_currency(listing.price) %></p>
         <p class="center"><%= "Sold by #{listing.user.name}" %></p>
         <p class="center"><%= listing.city %></p>
