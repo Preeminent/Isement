@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources "contacts", only: [:new, :create]
   get 'pages/terms'
   get 'pages/pricing'
+  get 'pages/how-it-works' => 'pages#how_it_works'
   get 'seller' => "listings#seller"
   get 'sales' => "orders#sales"
   get 'purchases' => "orders#purchases"
