@@ -17,7 +17,6 @@ body{color:#000;font-family:Helvetica,Arial,sans-serif;background:#EEE;}
 h1,h2,h3,h4,h4{font-family: league_gothicregular,sans-serif;}
 .padbot{margin-bottom:40px}
 .right{text-align:right;}
-.overauto{overflow:auto;}
 .center-block {display:block;margin:auto;float:none;}
 .navbar-nav > li > a.str-link{padding:6px 12px 6px 12px;border-radius:6px;border: solid 1px #000;color:#000;margin-top:8px;}
 .navbar-nav > li > a.str-link:hover{color:#555;border: solid 1px #555;}
@@ -38,3 +37,5 @@ h1,h2,h3,h4,h4{font-family: league_gothicregular,sans-serif;}
 .hidden { display: none; }
 .hm-listing-bx:hover{background:#e5e5e5;}
 .hm-listing-bx .thumbnail{min-height:500px;}
+.newlistlink{height:auto;margin-bottom:60px;}
+#bottom{width:100%;background:#d9d9d9;position:fixed;bottom:0;left:0;height:auto;}
