@@ -1,3 +1,4 @@
+<div class="container padbotlg">
 <%= form_for @listing, :html => { :multipart => true } do |f| %>
   <% if @listing.errors.any? %>
     <div id="error_explanation" class="alert alert-danger alert-dismissable">
@@ -69,3 +70,4 @@
     <%= f.submit class: "btn btn-primary btn-lg" %>
   </div>
 <% end %>
+</div>

@@ -18,24 +18,19 @@
 
 
 <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Seller Account <b class="caret"></b></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.name %> <b class="caret"></b></a>
           <ul class="dropdown-menu">
             <li><%= link_to "your listings", seller_path, class: "navlinks" %></li>
             <li><%= link_to "sales history", sales_path, class: "navlinks" %></li>
-            
-          </ul>
-        </li>
-
-
-<li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.name %><b class="caret"></b></a>
-          <ul class="dropdown-menu">
             <li><%= link_to "purchase history", purchases_path, class: "navlinks" %></li>
             <li><%= link_to "edit profile", edit_user_registration_path, class: "navlinks" %></li>
             <li><%= link_to "sign-out", destroy_user_session_path, method: :delete, class: "navlinks" %></li>
             
           </ul>
         </li>
+
+
+
   <% else %>
         <li><%= link_to "sign-up", new_user_registration_path, class: "navlinks" %></li>
         <li><%= link_to "sign-in", new_user_session_path, class: "navlinks str-link" %></li>
