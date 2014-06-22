@@ -5,9 +5,7 @@ Rails.application.routes.draw do
   resources :listings do
     resources :orders, only: [:new, :create]
   end
-
   get 'pages/about'
-  resources "contacts", only: [:new, :create]
   get 'pages/terms'
   get 'pages/pricing'
   get 'pages/how-it-works' => 'pages#how_it_works'
