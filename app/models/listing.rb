@@ -9,7 +9,7 @@ has_attached_file :image, :styles => { :medium => "200x", :thumb => "100x100>" }
     :dropbox_credentials => Rails.root.join("config/dropbox.yml"),
     :path => ":style/:id_:filename"
 end
-  validates :name, :description, :price, :city, :state, presence: true
+  validates :name, :description, :price, :city, :state, :duration, :terms, presence: true
   validates :price, numericality: {greater_than: 0}
   validates_attachment_content_type :image, :content_type => %w(image/jpeg image/jpg image/png)
 

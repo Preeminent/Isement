@@ -17,6 +17,8 @@ gem "devise"
 gem 'stripe'
 gem 'jquery-turbolinks'
 gem 'mail_form'
+gem 'geocoder'
+gem 'gmaps4rails'
 
 
 group :production do
