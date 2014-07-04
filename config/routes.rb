@@ -5,14 +5,20 @@ Rails.application.routes.draw do
   resources :listings do
     resources :orders, only: [:new, :create]
   end
+  get 'maps/portland'
+  get 'maps/seattle'
+ 
   get 'pages/about'
   get 'pages/terms'
   get 'pages/pricing'
   get 'pages/how-it-works' => 'pages#how_it_works'
+  get 'maps/all' => 'maps#all'
   get 'seller' => "listings#seller"
   get 'sales' => "orders#sales"
   get 'purchases' => "orders#purchases"
   root 'listings#index'
+
+ 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

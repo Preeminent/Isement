@@ -24,6 +24,10 @@
 
 html{font-size:17px;}
 body{color:#000;font-family:encode_sans_compressedregular,sans-serif;background:#EEE;font-size:1em;}
+.navbar-brand{margin-top:10px;}
+ul{list-style-type: none;}
+li{margin:10px 0 10px 0;}
+li span{padding-right:10px;}
 h1,h2,h3,h4,h4{font-family: league_gothicregular,arial,sans-serif;}
 h1 {font-size: 3em;}
 h2 {font-size: 2.5em;}
@@ -60,3 +64,7 @@ h3 {font-size: 2em;}
 .how-boxes{height:300px;line-height:300px;text-align:center;}
 .how-boxes p{display:inline-block;vertical-align:middle;line-height:normal;}
 .aboutarea img{box-shadow: 0 8px 6px -6px black;}
+
+
+#mapgraphic{width:500px;height:500px;background: url("https://dl.dropboxusercontent.com/s/iott4zc7yuzcevv/pinpoint.jpg") no-repeat;}
+#map{width:100%;height:600px;}
