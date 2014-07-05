@@ -9,9 +9,10 @@ Rails.application.routes.draw do
   get 'maps/seattle'
  
   get 'pages/about'
-  get 'pages/terms'
-  get 'pages/pricing'
-  get 'pages/how-it-works' => 'pages#how_it_works'
+  match '/about' => 'pages#about', :via => [:get], as: 'about'
+  match '/terms' => 'pages#terms', :via => [:get], as: 'terms'
+  match '/pricing' => 'pages#pricing', :via => [:get], as: 'pricing'
+  match '/how-it-works' => 'pages#how_it_works', :via => [:get], as: 'how-it-works'
   get 'maps/all' => 'maps#all'
   get 'seller' => "listings#seller"
   get 'sales' => "orders#sales"

@@ -47,9 +47,7 @@ class ListingsController < ApplicationController
     current_user.save
   end
 
-   
-
-    respond_to do |format|
+  respond_to do |format|
       if @listing.save
         format.html { redirect_to @listing, notice: 'Listing was successfully created.' }
         format.json { render :show, status: :created, location: @listing }
@@ -92,7 +90,8 @@ class ListingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def listing_params
-      params.require(:listing).permit(:name, :description, :price, :duration, :street, :city, :state, :image, :duration, :category, :terms)
+      params.require(:listing).permit(:name, :description, :price, :duration, :street, :city, :state, :image, :duration, :category, :terms,
+       :country, :account_number, :routing_number, :stripeToken)
     end
 
     def check_user

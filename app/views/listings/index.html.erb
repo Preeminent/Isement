@@ -3,7 +3,14 @@
   <strong><h3>Now open to the Portland, Oregon market!</h3></strong><br>
   <span>Interested in another market?</span><br><a href="#" class="alert-link">Let Us Know.</a> 
 </div>-->
-<div class="row">
+<div class="row padbotlg">
+
+  <div class="newlistlink center">
+<% if user_signed_in? %>
+<%= link_to 'Post A New Listing', new_listing_path, class: "btn btn-lg btn-success" %>
+<% end %>
+</div><!--end newlistlink-->
+
   <% @listings.each do |listing| %>
   <div class="col-md-3 hm-listing-bx">
 
@@ -27,8 +34,3 @@
   </div>
   <% end %>
 </div>
-<div class="newlistlink">
-<% if user_signed_in? %>
-<%= link_to 'New Listing', new_listing_path, class: "btn btn-link" %>
-<% end %>
-</div><!--end newlistlink-->
