@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140703012903) do
+ActiveRecord::Schema.define(version: 20140720182650) do
 
   create_table "listings", force: true do |t|
-    t.string   "name"
+    t.string   "title"
     t.text     "description"
     t.decimal  "price"
     t.string   "city"
@@ -30,6 +30,14 @@ ActiveRecord::Schema.define(version: 20140703012903) do
     t.string   "category"
     t.string   "duration"
     t.text     "terms"
+    t.string   "image_two_file_name"
+    t.string   "image_two_content_type"
+    t.integer  "image_two_file_size"
+    t.datetime "image_two_updated_at"
+    t.string   "image_three_file_name"
+    t.string   "image_three_content_type"
+    t.integer  "image_three_file_size"
+    t.datetime "image_three_updated_at"
   end
 
   create_table "orders", force: true do |t|

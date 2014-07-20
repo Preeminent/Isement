@@ -31,9 +31,12 @@ class ListingsController < ApplicationController
   # POST /listings
   # POST /listings.json
   def create
+
     @listing = Listing.new(listing_params)
     @listing.user_id = current_user.id
+    
     if current_user.recipient.blank?
+
     Stripe.api_key = ENV["STRIPE_API_KEY"]
     token = params[:stripeToken]
 
@@ -45,7 +48,7 @@ class ListingsController < ApplicationController
 
      current_user.recipient = recipient.id
     current_user.save
-  end
+    end
 
   respond_to do |format|
       if @listing.save
@@ -90,7 +93,7 @@ class ListingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def listing_params
-      params.require(:listing).permit(:name, :description, :price, :duration, :street, :city, :state, :image, :duration, :category, :terms,
+      params.require(:listing).permit(:name, :description, :price, :duration, :street, :city, :state, :image, :image_two, :image_three, :duration, :category, :terms,
        :country, :account_number, :routing_number, :stripeToken)
     end
 
