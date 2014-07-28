@@ -25,7 +25,10 @@
 html{font-size:17px;}
 body{color:#000;font-family:encode_sans_compressedregular,sans-serif;background:#EEE;font-size:1em;}
 .navbar-brand{margin-top:10px;}
+.lesstop{margin-top:0;}
+.well{box-shadow: inset 2px 3px 2px #555;}
 ul{list-style-type: none;}
+.bold{font-weight:bold;}
 li{margin:10px 0 10px 0;}
 li span{padding-right:10px;}
 h1,h2,h3,h4,h4{font-family: league_gothicregular,arial,sans-serif;}
@@ -38,6 +41,9 @@ h3 {font-size: 2em;}
 .subhead{font-size:1.2em;}
 .right{text-align:right;}
 .small{font-size:0.9em;color:#555;}
+.red{color:red;}
+.lgpar{font-size:1.5em;font-weight:bold;}
+.lgrdpar{font-size:1.5em;color:red;}
 .center-block {display:block;margin:auto;float:none;}
 .navbar-nav > li > a.str-link{padding:6px 12px 6px 12px;border-radius:6px;border: solid 1px #000;color:#000;margin-top:8px;}
 .navbar-nav > li > a.str-link:hover{color:#555;border: solid 1px #555;}
@@ -54,6 +60,7 @@ h3 {font-size: 2em;}
 .show-details{font-size:1.5em;}
 .show-title{font-size:3em;}
 .show-sm-details{font-size:1.2em;}
+#listing-details{margin:40px 0;}
 .jumbotron{background: url("https://dl.dropboxusercontent.com/s/bzoo46d2m448xap/canal.jpg") no-repeat;background-size:cover;color:#f4fefd;h1,h2{text-shadow:1px 1px 0 black, -1px -1px 0 black;};border-top:solid thin #555;border-bottom:solid thin #555;}
 .wht-text{color:#FFF}
 .sm-message{font-size:0.9em;color:red;}

@@ -4,19 +4,46 @@
     <div class="thumbnail">
     <%= image_tag @listing.image.url %>
      </div>
+    <div id="other-imgs">
+        <div class="thumbnail">
+        <%= image_tag @listing.image_two.url %>
+        </div>
+
+        <div class="thumbnail">
+        <%= image_tag @listing.image_three.url %>
+        </div>
+    </div><!--end other-imgs-->
   </div>
 
   <div class="col-md-6">
     <h3 class="show-title"><%= @listing.title %></h3>
     <p class="show-details"><%= @listing.description %></p>
-    <p class="show-sm-details"><%= number_to_currency(@listing.price) %></p>
-    <p class="show-sm-details"><%= @listing.city %></p>
-    <p class="show-sm-details"><%= @listing.state %></p>
-    <br>
-<div class="center">
-    <%= link_to "Order This Spot", new_listing_order_path(@listing), class: "btn btn-primary wht-text" %>
-  </div><!end center-->                     
-  </div>
+
+      <div class="well well-lg center" id="listing-details">
+        <h3 class="center lesstop">Space Details</h3>
+          <p class="show-sm-details lgpar"><span class="glyphicon glyphicon-usd"><br><%= number_to_currency(@listing.price) %> - <%= @listing.duration %></p>
+          <br>
+          <p class="show-sm-details"><span class="glyphicon glyphicon-map-marker"></span><br><%= @listing.street %></p>
+          <p class="show-sm-details"><%= @listing.city %>, <%= @listing.state %></p>
+          <br>
+          <p class="show-sm-details red"><span class="glyphicon glyphicon-list-alt"></span><br><%= @listing.terms %></p>
+      </div><!--end listing-details-->
+
+      <div class="well center" id="seller-details">
+        <h3 class="center lesstop">Seller Details</h3>
+        <p class="show-sm-details"><span class="glyphicon glyphicon-user"></span><br><%= @listing.user.name %></p>
+          <% if @purchased %>
+          <p class="show-sm-details"><span class="glyphicon glyphicon-envelope"></span><br>Seller Email</p>
+          <p class="show-sm-details"><span class="glyphicon glyphicon-earphone"></span><br>Seller Phone</p>
+          </div><!--end seller-details-->
+          <% else %>
+          <p class="show-sm-details">Seller's contact info provided after purchase.</p>
+          <% end %>
+      </div><!--end well-->
+
+  <div class="center">
+      <%= link_to "Order This Spot", new_listing_order_path(@listing), class: "btn btn-lg btn-primary wht-text" %>
+    </div><!end center-->
 
 </div>
 

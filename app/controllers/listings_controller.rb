@@ -16,6 +16,16 @@ class ListingsController < ApplicationController
   # GET /listings/1
   # GET /listings/1.json
   def show
+
+    @orders = Order.where(buyer_id: current_user) 
+    @purchased = false 
+
+    @orders.each do |order| 
+    if order.listing_id == @listing.id 
+    @purchased = true 
+    end 
+    end 
+
   end
 
   # GET /listings/new
@@ -34,6 +44,7 @@ class ListingsController < ApplicationController
 
     @listing = Listing.new(listing_params)
     @listing.user_id = current_user.id
+    
     
     if current_user.recipient.blank?
 

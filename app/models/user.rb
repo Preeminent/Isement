@@ -4,7 +4,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
- validates :name, :city, :state, presence: true
+ validates :name, presence: true
+ validates :phone, :zip, numericality: { only_integer: true }
+ validates_format_of :email, :alt_email, :with => /@/
 
  has_many :listings, dependent: :destroy
  has_many :sales, class_name: "Order", foreign_key: "seller_id"

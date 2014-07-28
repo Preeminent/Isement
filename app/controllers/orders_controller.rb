@@ -14,6 +14,7 @@ end
   def new
     @order = Order.new
     @listing = Listing.find(params[:listing_id])
+    
   end
 
 # POST /orders
@@ -22,6 +23,7 @@ end
     @order = Order.new(order_params)
     @listing = Listing.find(params[:listing_id])
     @seller = @listing.user
+    
 
     @order.listing_id = @listing.id
     @order.buyer_id = current_user.id

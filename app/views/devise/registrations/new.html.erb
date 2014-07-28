@@ -11,16 +11,6 @@
 </div>
 
 <div class="form-group">
-  	<%= f.label :city %>
-  <%= f.text_field :city, class: "form-control" %>
-</div>
-
-<div class="form-group">
-  	<%= f.label :state %>
-  <%= f.text_field :state, class: "form-control" %>
-</div>
-
- <div class="form-group">
   	<%= f.label :email %>
   <%= f.email_field :email, class: "form-control" %>
 </div>
@@ -29,9 +19,50 @@
     <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
 </div>
 
- <div class="form-group"><%= f.label :password_confirmation %>
+ <div class="form-group margbot"><%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
 </div>
+
+<hr>
+
+
+<h3>If you plan to sell, fill these in too:</h3>
+<p class="small">(Contact details only shown after a user purchases your space.)</p>
+
+<div class="form-group">
+    <%= f.label :alternate_email %>
+  <%= f.text_field :alt_email, class: "form-control" %>
+  <p class="small">(Enter only if you want users to contact you at a different email address.)</p>
+</div>
+
+<div class="form-group">
+    <%= f.label :phone %>
+  <%= f.phone_field :phone, class: "form-control" %>
+</div>
+
+<div class="form-group">
+    <%= f.label :street %>
+  <%= f.text_field :street, class: "form-control" %>
+</div>
+
+<div class="form-group">
+    <%= f.label :city %>
+  <%= f.text_field :city, class: "form-control" %>
+</div>
+
+<div class="form-group">
+    <%= f.label :state %>
+  <%= f.text_field :state, class: "form-control" %>
+</div>
+
+<div class="form-group">
+    <%= f.label :zip %>
+  <%= f.text_field :zip, class: "form-control" %>
+</div>
+
+
+
+
 
   <div class="form-group">
   	<%= f.submit "Sign up", class: "btn btn-primary" %>
