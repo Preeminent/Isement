@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140727231537) do
+ActiveRecord::Schema.define(version: 20140807004713) do
 
   create_table "listings", force: true do |t|
     t.string   "title"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20140727231537) do
     t.string   "image_three_content_type"
     t.integer  "image_three_file_size"
     t.datetime "image_three_updated_at"
+    t.text     "updates"
   end
 
   create_table "orders", force: true do |t|
