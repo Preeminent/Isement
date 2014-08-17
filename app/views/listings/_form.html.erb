@@ -58,6 +58,12 @@
   </div>
 
   <div class="form-group">
+    <%= f.label :dimensions %>
+    <span class="small">(Enter the size of your available ad space.)</span>
+    <%= f.text_field :dimensions, class: "form-control" %>
+  </div>
+
+ <div class="form-group">
     <%= f.label :image %>
     <span class="small">(This is your (best), main image. Shown in search results.)</span>
     <%= f.file_field :image, class: "form-control" %>
@@ -88,12 +94,11 @@
 
 <div class="form-group">
     <%= f.label :terms %>
-    <span class="small">(What type of ad messages you will and won't allow.)</span>
+    <span class="small">(What type of ad messages you will and won't allow, as well as any type of sign material you don't want used. For example, you may only want a yard sign used, and not a banner.)</span>
     <%= f.text_area :terms, class: "form-control" %>
   </div>
 
-
-  <% if current_user.recipient.blank? %>
+<% if current_user.recipient.blank? %>
     <br>
     <h1>Bank Account Information</h1>
     <p class="sm-message">(You'll only need to enter this once.)</p>

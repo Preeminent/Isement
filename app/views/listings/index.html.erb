@@ -13,6 +13,7 @@
     </div>
 </div><!--end search-wrap-->
 
+
   <% @listings.each do |listing| %>
   <div class="col-md-6 hm-listing-bx">
 
@@ -20,20 +21,29 @@
   <%= link_to image_tag(listing.image.url(:xlarge)), listing %>
        
       <div class="caption">
-        <h2 class="center"><%= listing.title %></h2>
-        <p><%= truncate listing.description, length: 100 %></p>
-        <p class="center"><%= number_to_currency(listing.price) %></p>
-        <p class="center"><%= "Sold by #{listing.user.name}" %></p>
-        <p class="center"><%= listing.city %></p>
-        <p class="center"><%= listing.state %></p>
-        
-      <div class="btn-wrap center">
-        <%= link_to 'View It', listing, class: "btn btn-primary" %>
-      </div><!--end btn-wrap-->
-        </div>
-    </div>
+          <h2 class="center"><%= listing.title %></h2>
+          <p><%= truncate listing.description, length: 200 %></p>
+          <div class="btn-wrap center">
+           <%= link_to 'View It', listing, class: "btn btn-primary" %>
+          </div><!--end btn-wrap-->
+
+             <div id="hm-box-bottom">
+                <ul>
+                  <li><%= number_to_currency(listing.price) %></li>
+                  <li><%= "Sold by #{listing.user.name}" %></li>
+                  <li><%= listing.city %>, <%= listing.state %> </li>
+                </ul>
+              </div><!--end hm-box-bottom-->
 
 
-  </div>
+      </div><!--end caption-->
+
+
+
+       
+      
+  
+  </div><!--end thumbnail-->
+</div>
   <% end %>
 </div>

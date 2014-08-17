@@ -27,7 +27,7 @@ body{color:#000;font-family:encode_sans_compressedregular,sans-serif;background:
 .navbar-brand{margin-top:10px;}
 .lesstop{margin-top:0;}
 .well{box-shadow: inset 2px 3px 2px #555;}
-ul{list-style-type: none;}
+ul{list-style-type: none;padding:0;margin:0;}
 .bold{font-weight:bold;}
 .red{color:red;}
 li{margin:10px 0 10px 0;}
@@ -46,7 +46,10 @@ h3 {font-size: 2em;}
 .red{color:red;}
 .lgpar{font-size:1.5em;font-weight:bold;}
 .lgrdpar{font-size:1.5em;color:red;}
-.center-block {display:block;margin:auto;float:none;}
+.caption{overflow:auto;}
+
+.clear{clear:both;}
+.center-block {display:block;margin:0 auto;float:none;}
 .navbar-nav > li > a.str-link{padding:6px 12px 6px 12px;border-radius:6px;border: solid 1px #000;color:#000;margin-top:8px;}
 .navbar-nav > li > a.str-link:hover{color:#555;border: solid 1px #555;}
 .navbar{margin-bottom:0;}
@@ -68,7 +71,10 @@ h3 {font-size: 2em;}
 .sm-message{font-size:0.9em;color:red;}
 .hidden { display: none; }
 .hm-listing-bx:hover{background:#e5e5e5;}
-.hm-listing-bx .thumbnail{min-height:500px;}
+.hm-listing-bx .thumbnail{min-height:740px;}
+#hm-box-bottom{position:absolute;bottom:0;}
+#hm-box-bottom ul{padding:6px;text-align:center;}
+#hm-box-bottom ul li{float:left;padding:6px;}
 .newlistlink{height:auto;margin-bottom:60px;}
 #bottom{width:100%;background:#d9d9d9;position:fixed;bottom:0;left:0;height:auto;opacity:0.9;}
 
