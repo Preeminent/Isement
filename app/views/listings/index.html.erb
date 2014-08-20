@@ -23,17 +23,16 @@
       <div class="caption">
           <h2 class="center"><%= listing.title %></h2>
           <p><%= truncate listing.description, length: 200 %></p>
+          
+
+             <ul class="center">
+                  <li class="lgrdpar"><%= number_to_currency(listing.price) %></li>
+                  <li class="lgrdpar margbotsm"><%= listing.city %>, <%= listing.state %> </li>
+                </ul>
+
           <div class="btn-wrap center">
            <%= link_to 'View It', listing, class: "btn btn-primary" %>
           </div><!--end btn-wrap-->
-
-             <div id="hm-box-bottom">
-                <ul>
-                  <li><%= number_to_currency(listing.price) %></li>
-                  <li><%= "Sold by #{listing.user.name}" %></li>
-                  <li><%= listing.city %>, <%= listing.state %> </li>
-                </ul>
-              </div><!--end hm-box-bottom-->
 
 
       </div><!--end caption-->

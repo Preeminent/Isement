@@ -13,11 +13,11 @@
 
 @font-face {
     font-family: 'encode_sans_compressedregular';
-    src: url('encodesanscompressed-400-regular-webfont.eot');
-    src: url('encodesanscompressed-400-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('encodesanscompressed-400-regular-webfont.woff') format('woff'),
-         url('encodesanscompressed-400-regular-webfont.ttf') format('truetype'),
-         url('encodesanscompressed-400-regular-webfont.svg#encode_sans_compressedregular') format('svg');
+    src: asset-url('encodesanscompressed-400-regular-webfont.eot');
+    src: asset-url('encodesanscompressed-400-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         asset-url('encodesanscompressed-400-regular-webfont.woff') format('woff'),
+         asset-url('encodesanscompressed-400-regular-webfont.ttf') format('truetype'),
+         asset-url('encodesanscompressed-400-regular-webfont.svg#encode_sans_compressedregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
