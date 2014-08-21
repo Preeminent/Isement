@@ -22,6 +22,7 @@ gem 'gmaps4rails'
 
 
 group :production do
+	gem 'unicorn'
 	gem 'pg'
 	gem 'rails_12factor'
 end
