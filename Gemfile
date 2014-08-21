@@ -24,6 +24,7 @@ gem 'gmaps4rails'
 group :production do
 	gem 'unicorn'
 	gem 'rails_12factor'
+	gem 'pg'
 end
 
 group :development, :test do
