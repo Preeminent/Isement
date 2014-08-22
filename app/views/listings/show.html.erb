@@ -24,9 +24,9 @@
           <p class="show-sm-details lgpar"><span class="glyphicon glyphicon-usd"><br><%= number_to_currency(@listing.price) %> - <%= @listing.duration %></p>
           <br>
           <p class="show-sm-details"><span class="glyphicon glyphicon-map-marker"></span><br><%= @listing.street %></p>
-          <p class="show-sm-details"><span class="glyphicon glyphicon-fullscreen"><%= @listing.city %>, <%= @listing.state %></p>
+          <p class="show-sm-details"><%= @listing.city %>, <%= @listing.state %></p>
           <br>
-          <p class="show-sm-details"><%= @listing.dimensions %></p>
+          <p class="show-sm-details"><span class="glyphicon glyphicon-fullscreen"><%= @listing.dimensions %></p>
           <br>
           <p class="show-sm-details"><span class="glyphicon glyphicon-list-alt"></span><br><%= @listing.terms %></p>
       </div><!--end listing-details-->
