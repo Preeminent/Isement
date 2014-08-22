@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
  validates :name, presence: true
- validates :phone, :zip, numericality: { only_integer: true }
+ validates :zip, numericality: { only_integer: true }
  validates_format_of :email, :alt_email, :with => /@/
 
  has_many :listings, dependent: :destroy
