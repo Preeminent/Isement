@@ -2,23 +2,23 @@ class Listing < ActiveRecord::Base
 
 	if Rails.env.development?
 
-    has_attached_file :image, :styles => { :xlarge => "100%x300#", :thumb => "100x100#>" }, :default_url => "noimage.jpg"
-    has_attached_file :image_two, :styles => { :xlarge => "100%x300#", :thumb => "100x100#>" }, :default_url => "noimage.jpg"
-    has_attached_file :image_three, :styles => { :xlarge => "100%x300#", :thumb => "100x100#>" }, :default_url => "noimage.jpg"
+    has_attached_file :image, :styles => { :xlarge => "100%x300!", :thumb => "100x100!>" }, :default_url => "noimage.jpg"
+    has_attached_file :image_two, :styles => { :xlarge => "100%x300!", :thumb => "100x100!>" }, :default_url => "noimage.jpg"
+    has_attached_file :image_three, :styles => { :xlarge => "100%x300!", :thumb => "100x100!>" }, :default_url => "noimage.jpg"
     
   else
 
-  	has_attached_file :image, :styles => { :xlarge => "100%x300#", :thumb => "100x100#>" }, :default_url => "noimage.jpg",
+  	has_attached_file :image, :styles => { :xlarge => "100%x300!", :thumb => "100x100!>" }, :default_url => "noimage.jpg",
     :storage => :dropbox,
     :dropbox_credentials => Rails.root.join("config/dropbox.yml"),
     :path => ":style/:id_:filename"
 
-    has_attached_file :image_two, :styles => { :xlarge => "100%x300#", :thumb => "100x100#>" }, :default_url => "noimage.jpg",
+    has_attached_file :image_two, :styles => { :xlarge => "100%x300!", :thumb => "100x100!>" }, :default_url => "noimage.jpg",
     :storage => :dropbox,
     :dropbox_credentials => Rails.root.join("config/dropbox.yml"),
     :path => ":style/:id_:filename"
 
-    has_attached_file :image_three, :styles => { :xlarge => "100%x300#", :thumb => "100x100#>" }, :default_url => "noimage.jpg",
+    has_attached_file :image_three, :styles => { :xlarge => "100%x300!", :thumb => "100x100!>" }, :default_url => "noimage.jpg",
 	  :storage => :dropbox,
     :dropbox_credentials => Rails.root.join("config/dropbox.yml"),
     :path => ":style/:id_:filename"
