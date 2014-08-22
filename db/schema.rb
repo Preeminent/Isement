@@ -73,10 +73,10 @@ ActiveRecord::Schema.define(version: 20140817015828) do
     t.string   "state"
     t.string   "city"
     t.string   "recipient"
+    t.string   "street"
     t.string   "alt_email"
     t.integer  "zip"
     t.integer  "phone"
-    t.string   "street"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
