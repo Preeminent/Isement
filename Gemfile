@@ -19,16 +19,16 @@ gem 'jquery-turbolinks'
 gem 'mail_form'
 gem 'geocoder'
 gem 'gmaps4rails'
-
+gem 'pg'
 
 group :production do
 	gem 'unicorn'
 	gem 'rails_12factor'
-	gem 'pg'
+	
 end
 
 group :development, :test do
-	gem 'pg'
+	
 	gem 'foreman'
 end
 

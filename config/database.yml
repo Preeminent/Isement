@@ -16,4 +16,6 @@ production:
  encoding: unicode
  pool: 5
  timeout: 5000
+ username: NormalUse
+ password: 720800
 
