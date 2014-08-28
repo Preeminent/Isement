@@ -5,16 +5,10 @@ development:
  pool: 5
  timeout: 5000
  username: NormalUse
- password:
+ password: 720800
+ host: localhost
 
- test:
- adapter: postgresql
- database: isement_test
- encoding: unicode
- pool: 5
- timeout: 5000
- username: NormalUse
- password:
+ 
 
 production:
  adapter: postgresql
