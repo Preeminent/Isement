@@ -23,4 +23,3 @@
 
 #Ignore email user and pass
 .env
-Procfile
